@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { JournalEntry } from "./journal-entry";
 
 const rawJournalData = [
     { title: "Post One", content: "Post content", status: "draft" },
@@ -6,6 +7,8 @@ const rawJournalData = [
     { title: "Post Three", content: "Post content", status: "published" },
     { title: "Post Four", content: "Post content", status: "published" },
 ];
+
+
 
 // Class component
 export default class JournalList extends Component {
@@ -21,7 +24,10 @@ export default class JournalList extends Component {
 
     render() {
     return (
+      <div>
       <h2>{this.props.heading}</h2>
+      <JournalEntry title="Some title" content="More content" />
+      </div>
     );
     }
   }
